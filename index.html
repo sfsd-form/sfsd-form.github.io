@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INCEDENT REPORTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main__wrapper">
+    <div class="main">
+    <div class="content">
+		<div style="border: 1px solid black; padding: 5px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); width: 858px;">
+			<table width="100%">
+				<tbody>
+					<tr>
+						<td style="vertical-align: top; width:26%; padding-right:10px; color: rgb(0, 0, 0);">
+							<div align="left">
+								<br>
+							</div>
+						</td>
+						<td style="vertical-align: top; width:26%; color: rgb(0, 0, 0);">
+							<div align="center">
+								SAN FIERRO SHERIFF'S DEPARTMENT<br>
+								<span style="font-weight: bold">INCIDENTREPORT</span> #<input style = "width: 27%; " value="00000000" id = "incedent_num">
+							</div>
+						</td>
+						<td style="vertical-align: top; width:26%; padding-left:10px;">
+							<br>
+							<div align="right">
+								<span style="font-size: 85%; line-height: 116%; color: rgb(0, 0, 0);"></span>
+								<div align="right">
+									<span style="font-size: 85%; line-height: 116%; color: rgb(0, 0, 0);"><span style="color: #FFFFFF">_</span><br>
+									<span style="font-size: 85%; line-height: 116%;"><span style="font-weight: bold">Filed in:<input type="text" class="input_2" style = "width: 20%;" id="filed_in"></span>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div style="border-bottom: 1px solid #000; padding: 1px;"></div><br>
+			<div style="padding: 2px; background-color: #000;">
+				<span><span style="color: #FFFFFF"></span></span>
+				<div align="center">
+					<span style="color:#FFFFFF">ИНФОРМАЦИЯ ОБ ИНЦИДЕНТЕ</span>
+				</div>
+			</div>
+			<div style="border: 1px solid #000; padding: 5px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+				<span style="color: #000000"></span>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top; width:50%; padding-right:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Характер инцидента</span><br>
+								<input type="text" class="input_2" id = "incedent_reason"> 
+							</td>
+							<td style="vertical-align: top; width:50%; padding-left:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Дата</span><br>
+								<input type="date" class="input_2" id = "date_"> 
+							</td>
+						</tr>
+					</tbody>
+				</table><br>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top; width:50%; padding-right:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Локация</span><br>
+								<input type="text" class="input_2" id = "location"> 
+							</td>
+							<td style="vertical-align: top; width:50%; padding-left:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Время</span><br>
+								<input type="text" class="input_2" id = "time"> 
+							</td>
+						</tr>
+					</tbody>
+				</table><br>
+				<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Подробное описание ситуации</span><br>
+				<textarea class = "input_mainandetc" id = "situation_description" ></textarea>
+			</div><br>
+			<div style="padding: 2px; background-color: #000;">
+				<span><span style="color: #FFFFFF"></span></span>
+				<div align="center">
+					<span style="color:#FFFFFF">ИНФОРМАЦИЯ О ПОМОЩНИКЕ</span>
+				</div>
+			</div>
+			<div style="border: 1px solid #000; padding: 5px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+				<span style="color: #000000"></span>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top; width:50%; padding-right:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Имя</span><br>
+								<input type="text" class="input_2" id = "name"> 
+							</td>
+							<td style="vertical-align: top; width:50%; padding-left:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Фамилия</span><br>
+								<input type="text" class="input_2" id = "surname"> 
+							</td>
+						</tr>
+					</tbody>
+				</table><br>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top; width:50%; padding-right:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Дивизион</span><br>
+								<input type="text" class="input_2" id = "division"> 
+							</td>
+							<td style="vertical-align: top; width:50%; padding-left:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Маркировка</span><br>
+								<input type="text" class="input_2" id = "marker"> 
+							</td>
+						</tr>
+					</tbody>
+				</table><br>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top; width:50%; padding-right:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Адрес места жительства</span><br>
+								<input type="text" class="input_2" id = "adres"> 
+							</td>
+							<td style="vertical-align: top; width:50%; padding-left:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Номер телефона для связи</span><br>
+								<input type="text" class="input_2" id = "phone_num"> 
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><br>
+			<div style="padding: 2px; background-color: #000;">
+				<span><span style="color: #FFFFFF"></span></span>
+				<div align="center">
+					<span style="color:#FFFFFF">ИНФОРМАЦИЯ ОБ УЧАСТНИКАХ</span>
+				</div>
+			</div>
+			<div style="border: 1px solid #000; padding: 5px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+				<span style="color: #000000"><span style="font-weight: bold; font-size: 90%; line-height: 116%;">Прочие помощники на ситуации</span></span><br>
+				<textarea type="text" class="input_2" id = "other_sheriffs"></textarea>
+				<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Пострадавшие</span><br>
+				<textarea type="text" class="input_2" id = "victims"></textarea><br>
+				<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Свидетели</span><br>
+				<textarea type="text" class="input_2" id = "witnesses"></textarea>
+				<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Подозреваемые</span><br>
+				<textarea type="text" class="input_2" id = "suspects"></textarea>
+				<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Улики</span><br>
+				<textarea type="text" class="input_2" id = "evidence"></textarea>
+			</div><br>
+			<div style="border-bottom: 1px solid #000; padding: 1px;"></div><br>
+			<div style="padding: 2px; background-color: #000;">
+				<span><span style="color: #FFFFFF"></span></span>
+				<div align="center">
+					<span style="color:#FFFFFF">ДЛЯ ДЕТЕКТИВА</span>
+				</div>
+			</div>
+			<div style="border: 1px solid #000; padding: 5px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+				<span style="color: #000000"></span>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top; width:26%; padding-right:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Имя</span><br>
+								<div style="background-color:white; border:1px solid #ccc; color: #555555; padding: 5px">
+									Заполняется детективом
+								</div>
+							</td>
+							<td style="vertical-align: top; width:26%;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Фамилия</span><br>
+								<div style="background-color:white; border:1px solid #ccc; color: #555555; padding: 5px">
+									Заполняется детективом
+								</div>
+							</td>
+							<td style="vertical-align: top; width:26%; padding-left:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Звание</span><br>
+								<div style="background-color:white; border:1px solid #ccc; color: #555555; padding: 5px">
+									Заполняется детективом
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table><br>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top; width:50%; padding-right:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Передано в</span><br>
+								<div style="background-color:white; border:1px solid #ccc; color: #555555; padding: 5px">
+									Заполняется детективом
+								</div>
+							</td>
+							<td style="vertical-align: top; width:50%; padding-left:10px;">
+								<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Дата</span><br>
+								<div style="background-color:white; border:1px solid #ccc; color: #555555; padding: 5px">
+									Заполняется детективом
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+            <div class = "submit" ><button class = "btn submit_but" id = "btn_" type = "button"><span class="text">Сгенерировать</span></button></div>
+
+			<div align="right">
+				<span style="font-size: 85%; line-height: 116%;"></span>
+			</div>
+			<div style="border-bottom: 1px solid #000; padding: 1px;"></div>
+		</div>
+	</div>
+    </div>
+    <div id="modalWin"><div id="bufmodal">
+        <div class="modal_content">
+            <div style="font-weight: bold; font-size: 120%; line-height: 116%;text-align: center;">Название темы:</div><br>
+            <textarea id = "nameBB" cols = "63" rows = "1" style = "font-size: 21px;" ></textarea><br><br>
+            <div style="font-weight: bold; font-size: 120%; line-height: 116%;text-align: center;">Содержание(скопируйте и вставьте на форум)</div><br>
+            <textarea id = "outputBB" cols = "100" rows = "20" ></textarea><br>
+            <div class = "submit" >
+                <button class = "btn submit_but" type = "button" id = "btn_close"><span class="text">Закрыть окно</span></button>
+                <button class = "btn submit_but" type = "button" onclick="myFunction()"><span class="text">Скопировать</span></button>
+            </div>
+        </div>
+    </div></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src = "index.js"></script>
+</body>
+</html>
