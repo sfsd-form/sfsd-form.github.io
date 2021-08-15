@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ОВР</title>
+</head>
+<body style="background-color: rgb(218, 218, 218);margin:11vh;">
+    <main class="main_wrapper">
+    <div style="border: 1px solid black; padding: 5px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+		<span style="font-family: Times New Roman;"></span>
+		<div align="center">
+			<span style="font-family: Times New Roman;"><span style="font-size: 125%; line-height: 116%;">ДЕПАРТАМЕНТ ШЕРИФА ОКРУГА САН-ФИЕРРО</span><br>
+			<span style="font-size: 135%; line-height: 116%;"><span style="font-weight: bold">ОТДЕЛ ВНУТРЕННИХ РАССЛЕДОВАНИЙ</span></span><br>
+			<br>
+			<span style="font-size: 180%; line-height: 116%;"><span style="font-weight: bold">ДЕЛО № <span style="text-decoration: underline"><input type="text" style="font-size: 80%; width: 20%;text-align: center;" id="number_d" placeholder="XXX-XXX"></span></span></span></span>
+		</div><br>
+		<br>
+		<span style="font-size: 115%; line-height: 116%;"><span style="font-weight: bold">Дата открытия дела:</span> <input type="date" id = "date_start"> <br>
+		<span style="font-weight: bold">Дата закрытия дела:</span> <input type="date" id = "date_end"> <br>
+		<span style="font-weight: bold">Характер:</span>
+        <input list="character" placeholder="Выберите из списка" id="character_id">
+        <datalist id = "character">
+            <option value="межведомственный"></option>
+            <option value="административный"></option>
+            <option value="криминальный"></option>
+        </datalist><br>
+		<span style="font-weight: bold">Группа ответственных детективов:</span><input type="text" style="width: 67%;font-size:90%;" id="sheriffs" placeholder="(( сюда вписываем состав следователей по делу ))"> </span>
+		<hr>
+		<div align="center">
+			<span style="font-size: 150%; line-height: 116%;"><br>
+			<br>
+			<span style="font-weight: bold">I. ПЕРВИЧНЫЙ ИНЦИДЕНТ</span></span>
+		</div><br>
+		<br>
+		<span style="font-size: 115%; line-height: 116%;"><span style="font-weight: bold">Основание:</span></span>
+        <input list="base_" placeholder="Выберите из списка" id = "base_id">
+        <datalist id = "base_">
+            <option value="Ситуационный отчёт"></option>
+            <option value="Жалоба на сотрудника"></option>
+            <option value="Жалоба от имени сотрудника"></option>
+        </datalist><br>
+		<br>
+		<span style="font-size: 125%; line-height: 116%;"></span>
+		<table width="100%">
+			<tbody>
+				<tr>
+					<td style="vertical-align: top; width:26%; padding-right:10px;">
+						<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Место</span><br>
+						<input type="text" class="input_2" id="place" placeholder="Место">
+					</td>
+					<td style="vertical-align: top; width:26%;">
+						<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Дата, время</span><br>
+						<input type="text" class="input_2" id="date_time" placeholder="DD.MM.GG HH:MM/HH:MM-HH:MM">
+					</td>
+					<td style="vertical-align: top; width:26%; padding-left:10px;">
+						<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Доказательства</span><br>
+						<input type="text" class="input_2" id="proof" placeholder="(( вносим список доказательств ))">
+					</td>
+				</tr>
+			</tbody>
+		</table><br>
+		<span style="font-size: 125%; line-height: 116%;"><span style="font-weight: bold; font-size: 90%; line-height: 116%;">Описание</span></span><br>
+		<textarea rows="3" type="text" class="input_2" id="description" placeholder="(( вносим всю информацию об инциденте, описываем все детали в строгом, академическом стиле ))"></textarea><br>
+		<br>
+		<span style="font-size: 125%; line-height: 116%;"></span>
+		<table width="100%">
+			<tbody>
+				<tr>
+					<td style="vertical-align: top; width:26%; padding-right:10px;">
+						<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Пострадавшие(-е)</span><br>
+                        <input type="text" class="input_2" id="victims" placeholder="(( список пострадавших ))">
+					</td>
+					<td style="vertical-align: top; width:26%;">
+						<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Свидетель(-и)</span><br>
+                        <input type="text" class="input_2" id="witnesses" placeholder="(( список свидетелей ))">
+					</td>
+					<td style="vertical-align: top; width:26%; padding-left:10px;">
+						<span style="font-weight: bold; font-size: 90%; line-height: 116%;">Подозреваемый(-е)</span><br>
+                        <input type="text" class="input_2" id="suspects" placeholder="(( список подозреваемых ))">
+					</td>
+				</tr>
+			</tbody>
+		</table><br>
+		<br>
+		<span style="font-size: 115%; line-height: 116%;"><span style="font-weight: bold">Предварительная позиция следствия:</span></span>
+        <textarea type="text" class="input_2" id="position" placeholder="( вносим сюда ваш теоретический взгляд на ситуацию, фундаментируем своё мнение на базе доказательств ))" rows = "4"></textarea>
+        <div class = "submit" ><button class = "btn submit_but" id = "btn_" type = "button"><span class="text">Сгенерировать</span></button></div>
+    </div>
+    
+    <div id="modalWin"><div id="bufmodal">
+        <div class="modal_content">
+            <div style="font-weight: bold; font-size: 120%; line-height: 116%;text-align: center;">Название темы:</div><br>
+            <textarea id = "nameBB" cols = "63" rows = "1" style = "font-size: 21px;" ></textarea><br><br>
+            <div style="font-weight: bold; font-size: 120%; line-height: 116%;text-align: center;">Содержание(скопируйте и вставьте на форум)</div><br>
+            <textarea id = "outputBB" cols = "100" rows = "20" ></textarea><br>
+            <div class = "submit" >
+                <button class = "btn submit_but" type = "button" id = "btn_close"><span class="text">Закрыть окно</span></button>
+                <button class = "btn submit_but" type = "button" onclick="myFunction()"><span class="text">Скопировать</span></button>
+            </div>
+        </div>
+    </div></div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src = "/scripts/ovr.js"></script>
+</html>
