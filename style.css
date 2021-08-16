@@ -103,11 +103,39 @@ textarea {
     display: none;
     background-color: rgba(201, 201, 201, 0.8);
     width: 100vw;
-    height: 700px;
     position: absolute;
     padding-top:2vh;
+    padding-bottom: 20px;
+    margin-top: -200vh;
 }
 #bufmodal{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+#modalWin_ii{
+    display: none;
+    background-color: rgba(201, 201, 201, 0.8);
+    width: 100vw;
+    position: absolute;
+    padding-top:2vh;
+    padding-bottom: 20px;
+}
+#bufmodal_ii{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modalWin_iii{
+    display: none;
+    background-color: rgba(201, 201, 201, 0.8);
+    width: 100vw;
+    position: absolute;
+    margin-top: 250vh;
+    padding-top:2vh;
+    padding-bottom: 20px;
+}
+#bufmodal_iii{
     display: flex;
     justify-content: center;
     align-items: center;

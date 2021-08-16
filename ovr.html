@@ -8,6 +8,7 @@
 </head>
 <body style="background-color: rgb(218, 218, 218);margin:11vh;">
     <main class="main_wrapper">
+        
     <div style="border: 1px solid black; padding: 5px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
 		<span style="font-family: Times New Roman;"></span>
 		<div align="center">
@@ -85,8 +86,45 @@
 		</table><br>
 		<br>
 		<span style="font-size: 115%; line-height: 116%;"><span style="font-weight: bold">Предварительная позиция следствия:</span></span>
-        <textarea type="text" class="input_2" id="position" placeholder="( вносим сюда ваш теоретический взгляд на ситуацию, фундаментируем своё мнение на базе доказательств ))" rows = "4"></textarea>
-        <div class = "submit" ><button class = "btn submit_but" id = "btn_" type = "button"><span class="text">Сгенерировать</span></button></div>
+        <textarea type="text" class="input_2" id="position" placeholder="( вносим сюда ваш теоретический взгляд на ситуацию, фундаментируем своё мнение на базе доказательств ))" rows = "4"></textarea><br>
+        <div class = "submit" ><button class = "btn submit_but" id = "btn_" type = "button"><span class="text">Сгенерировать</span></button></div><br><br>
+            <hr><br><hr><br><hr>
+            <div><br><br>
+                <span style="font-size: 130%; line-height: 116%;"><span style="font-weight: bold">II. ХОД РАССЛЕДОВАНИЯ</span></span>
+            </div>
+            <br>
+            <span style="font-size: 100%; line-height: 116%;"><span style="font-weight: bold"><input type="date" id = "date_rassled"></span><br><br>
+            <br></span>
+            <textarea id="hod_rasl" class = "input_2"rows="10" placeholder="(( в свободной форме описываем новые раздобытые факты и доказательства, информируя о ходе расследования и изменений в нем, также прикрепляем эти улики в виде чатлога или скриншотов ))"></textarea>
+            <span>San Fierro Sheriff Department, Internal Affairs Unit, Detective</span><input type="text" id="name_surname" placeholder="Name Surname" style="width: 10vw;">.
+            <div class = "submit" ><button class = "btn submit_but" id = "btn_ii" type = "button"><span class="text">Сгенерировать</span></button></div><br>
+            <hr><br><hr><br><hr><br><br>
+            <div align="center">
+                <span style="font-size: 130%; line-height: 116%;"><span style="font-weight: bold">III. ВЕРДИКТ РАССЛЕДОВАНИЯ</span></span>
+            </div><br>
+            <br>
+            <span style="font-weight: bold"><input type="date" id="date_iii"></span><br>
+            <br>
+            <div align="center">
+                <span style="font-size: 130%; line-height: 116%;"><span style="font-style: italic">ДЕПАРТАМЕНТ ШЕРИФА ОКРУГА САН-ФИЕРРО</span></span>
+            </div><br>
+            <div align="center">
+                <span style="font-size: 125%; line-height: 116%;"><span style="font-weight: bold">ОТДЕЛ ВНУТРЕННИХ РАССЛЕДОВАНИЙ</span></span>
+            </div><br>
+            <br>
+            <span style="font-size: 120%; line-height: 116%;"></span>
+            <div align="center">
+                <span style="font-size: 120%; line-height: 116%;"><span style="font-weight: bold">ВЕРДИКТ ПО ДЕЛУ № <span style="text-decoration: underline"><input type="text" style="font-size: 80%; width: 20%;text-align: center;" id="number_d_iii" placeholder="XXX-XXX"></span></span></span>
+            </div><br>
+            <br>
+            <span style="text-decoration: underline">У С Т А Н О В Л Е Н О :</span><br>
+            <textarea class = "input_2" rows = "4" placeholder="(( вписываем всю информацию об установленных и подтвержденных фактов, вынесенных подозрений с отсылками на доказательственную базу ))" id ="facts"></textarea><br>
+            <span style="text-decoration: underline">П Р И З Н А Т Ь :</span><br>
+            <textarea class = "input_2" rows = "4" placeholder="(( указываем ваше решение по данному делу по отношению к тому, или иному подозреваемому ))" id ="solution"></textarea><br><br>
+            <span style="text-decoration: underline">П О С Т А Н О В И Т Ь :</span><br>
+            <textarea class = "input_2" rows = "4" placeholder="(( вносим сюда прямой приказ, об отстранении/увольнении/возвращении к службе/ подозреваемого помощника, опять же таки, ссылаемся на уже описанные ранее факторы ))" id ="order"></textarea><br><br>
+            <span style="font-style: italic">San Fierro Sheriff Department, Internal Affairs Unit,</span> Detective <span style="font-weight: bold"><input type="text" id="name_surname_iii" placeholder="Name Surname" style="width: 10vw;"></span>.
+            <div class = "submit" ><button class = "btn submit_but" id = "btn_iii" type = "button"><span class="text">Сгенерировать</span></button></div>
     </div>
     
     <div id="modalWin"><div id="bufmodal">
@@ -101,7 +139,31 @@
             </div>
         </div>
     </div></div>
+    <div id="modalWin_ii"><div id="bufmodal_ii">
+        <div class="modal_content_ii">
+            <div style="font-weight: bold; font-size: 120%; line-height: 116%;text-align: center;">Содержание(скопируйте и вставьте на форум)</div><br>
+            <textarea id = "outputBB_ii" cols = "100" rows = "15" ></textarea><br>
+            <div class = "submit" >
+                <button class = "btn submit_but" type = "button" id = "btn_close_ii"><span class="text">Закрыть окно</span></button>
+                <button class = "btn submit_but" type = "button" onclick="myFunctionii()"><span class="text">Скопировать</span></button>
+            </div>
+        </div>
+    </div></div>
+    <div id="modalWin_iii"><div id="bufmodal_iii">
+        <div class="modal_content_iii">
+            <div style="font-weight: bold; font-size: 120%; line-height: 116%;text-align: center;">Содержание(скопируйте и вставьте на форум)</div><br>
+            <textarea id = "outputBB_iii" cols = "100" rows = "15" ></textarea><br>
+            <div class = "submit" >
+                <button class = "btn submit_but" type = "button" id = "btn_close_iii"><span class="text">Закрыть окно</span></button>
+                <button class = "btn submit_but" type = "button" onclick="myFunctioniii()"><span class="text">Скопировать</span></button>
+            </div>
+        </div>
+    </div></div>
     </main>
+
+    
+
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src = "/scripts/ovr.js"></script>
